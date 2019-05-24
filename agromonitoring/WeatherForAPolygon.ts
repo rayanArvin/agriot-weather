@@ -1,5 +1,5 @@
 import request = require("request");
-import {main} from "./main";
+import {main} from "../main";
 
 export class WeatherForAPolygon {
     private urlAPI = main.url + "weather";
@@ -12,7 +12,6 @@ export class WeatherForAPolygon {
         }
     };
     getCurrentWeather(polyid: string) {
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             let options:any = {
                 url: this.urlAPI + '?polyid=' + polyid + '&appid=' + main.appid,
@@ -23,7 +22,6 @@ export class WeatherForAPolygon {
             request.get(options,(error:any,response:any,body:any) => {
                 if (error)
                     reject(error);
-
                 if (response.statusCode === 200)
                     resolve(body);
                 else
@@ -33,7 +31,6 @@ export class WeatherForAPolygon {
     };
 
     getForecastWeather(polyid: string) {
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             let options: any = {
                 headers: {
@@ -53,7 +50,6 @@ export class WeatherForAPolygon {
     };
 
     getHistoryWeather(polyid: string, start:number, end:number){
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             let options: any = {
                 url: this.urlAPI + '/history?' + polyid + '&appid=' + main.appid + '&start=' + start + '&end=' + end,

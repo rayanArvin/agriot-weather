@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var request = require("request");
-var main_1 = require("./main");
-var WeatherForAPolygon = /** @class */ (function () {
-    function WeatherForAPolygon() {
+const request = require("request");
+const main_1 = require("../main");
+class WeatherForAPolygon {
+    constructor() {
         this.urlAPI = main_1.main.url + "weather";
         this.options = {
             body: {},
@@ -14,17 +14,15 @@ var WeatherForAPolygon = /** @class */ (function () {
             }
         };
     }
-    WeatherForAPolygon.prototype.getCurrentWeather = function (polyid) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
-                url: _this.urlAPI + '?polyid=' + polyid + '&appid=' + main_1.main.appid,
+    getCurrentWeather(polyid) {
+        return new Promise((resolve, reject) => {
+            let options = {
+                url: this.urlAPI + '?polyid=' + polyid + '&appid=' + main_1.main.appid,
                 headers: {
                     'User-Agent': 'request',
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -33,19 +31,17 @@ var WeatherForAPolygon = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
+    }
     ;
-    WeatherForAPolygon.prototype.getForecastWeather = function (polyid) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
+    getForecastWeather(polyid) {
+        return new Promise((resolve, reject) => {
+            let options = {
                 headers: {
-                    url: _this.urlAPI + '/forecast?polyid=' + polyid + '&appid=' + main_1.main.appid,
+                    url: this.urlAPI + '/forecast?polyid=' + polyid + '&appid=' + main_1.main.appid,
                     'User-Agent': 'request'
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -54,19 +50,17 @@ var WeatherForAPolygon = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
+    }
     ;
-    WeatherForAPolygon.prototype.getHistoryWeather = function (polyid, start, end) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
-                url: _this.urlAPI + '/history?' + polyid + '&appid=' + main_1.main.appid + '&start=' + start + '&end=' + end,
+    getHistoryWeather(polyid, start, end) {
+        return new Promise((resolve, reject) => {
+            let options = {
+                url: this.urlAPI + '/history?' + polyid + '&appid=' + main_1.main.appid + '&start=' + start + '&end=' + end,
                 headers: {
                     'User-Agent': 'request'
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -75,8 +69,8 @@ var WeatherForAPolygon = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
+    }
     ;
-    return WeatherForAPolygon;
-}());
+}
 exports.WeatherForAPolygon = WeatherForAPolygon;
+//# sourceMappingURL=WeatherForAPolygon.js.map

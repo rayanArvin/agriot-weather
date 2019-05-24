@@ -1,7 +1,7 @@
 {
   "name": "agroit-weather",
   "version": "1.0.3",
-  "description": "a library for separating data tha we need in samacontrol from Meteorology",
+  "description": "a library for separating data that we need in samacontrol from Meteorology",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

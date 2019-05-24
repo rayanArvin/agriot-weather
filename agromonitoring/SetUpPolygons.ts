@@ -1,5 +1,5 @@
 import request = require("request");
-import {main} from "./main";
+import {main} from "../main";
 
 export class SetUpPolygons {
     private urlAPI = main.url + "polygons";
@@ -13,7 +13,6 @@ export class SetUpPolygons {
     };
 
     createNewPolygon(name: string, coordinates: any) {
-        // @ts-ignore
         return new Promise((resolve, reject)=>{
             this.options.url += "?appid=" + main.appid;
             this.options.body = {
@@ -42,7 +41,6 @@ export class SetUpPolygons {
     }
 
     deleteAPolygon(polyid:string){
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             this.options.url += '/' + polyid + '?appid=' + main.appid;
             request.del(this.options, (error, response, body) => {
@@ -58,9 +56,8 @@ export class SetUpPolygons {
     }
 
     updateAPolygon(polyid:string,name:string){
-        // @ts-ignore
         return new Promise((resolve, reject) => {
-            this.options.url += '/' + polyid+ '/' +"?appid=" + main.appid;
+            this.options.url += '/' + polyid + '/' + '?appid=' + main.appid;
             this.options.body =
                 {
                     id: polyid,
@@ -81,11 +78,10 @@ export class SetUpPolygons {
     }
 
     getInfoForAPolygon(polyid:string) {
-        // @ts-ignore
         return new Promise((resolve, reject) => {
 
             let options:any = {
-                url: this.urlAPI + '/'+polyid+'?appid='+main.appid,
+                url: this.urlAPI + '/'+ polyid + '?appid=' + main.appid,
                 headers: {
                     'User-Agent': 'request'
                 }
@@ -105,15 +101,13 @@ export class SetUpPolygons {
     }
 
     getListOfPolygons() {
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             let options:any = {
-                url: this.urlAPI +'?appid='+main.appid,
+                url: this.urlAPI + '?appid=' + main.appid,
                 headers: {
                     'User-Agent': 'request'
                 }
             };
-
             request.get(options,(error:any,response:any,body:any) => {
                 if (error)
                     reject(error);
@@ -125,8 +119,6 @@ export class SetUpPolygons {
                 // console.log(data.weather[0].main);
             })
         });
-
-
     }
 }
 

@@ -1,5 +1,5 @@
 import request = require("request");
-import {main} from "./main";
+import {main} from "../main";
 
 export class SoidData {
     private urlAPI = main.url + 'soil';
@@ -12,7 +12,6 @@ export class SoidData {
         }
     };
     getCurrentSoilData(polyid:string){
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             let options = {
                 url : this.urlAPI + '?appid=' + main.appid + '&polyid=' + polyid,
@@ -32,7 +31,6 @@ export class SoidData {
     }
 
     getHistorySoil(polyid:string ,start:number ,end:number){
-        // @ts-ignore
         return new Promise((resolve, reject) => {
             let options = {
                 url: this.urlAPI + '/history?' +polyid+'&appid=' + main.appid + '&start='+start + '&end=' + end,

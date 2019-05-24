@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var request = require("request");
-var main_1 = require("./main");
-var SetUpPolygons = /** @class */ (function () {
-    function SetUpPolygons() {
+const request = require("request");
+const main_1 = require("../main");
+class SetUpPolygons {
+    constructor() {
         this.urlAPI = main_1.main.url + "polygons";
         this.options = {
             body: {},
@@ -14,12 +14,10 @@ var SetUpPolygons = /** @class */ (function () {
             }
         };
     }
-    SetUpPolygons.prototype.createNewPolygon = function (name, coordinates) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            _this.options.url += "?appid=" + main_1.main.appid;
-            _this.options.body = {
+    createNewPolygon(name, coordinates) {
+        return new Promise((resolve, reject) => {
+            this.options.url += "?appid=" + main_1.main.appid;
+            this.options.body = {
                 name: name,
                 geo_json: {
                     type: "Feature",
@@ -30,7 +28,7 @@ var SetUpPolygons = /** @class */ (function () {
                     }
                 }
             };
-            request.post(_this.options, function (error, response, body) {
+            request.post(this.options, function (error, response, body) {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -39,13 +37,11 @@ var SetUpPolygons = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
-    SetUpPolygons.prototype.deleteAPolygon = function (polyid) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            _this.options.url += '/' + polyid + '?appid=' + main_1.main.appid;
-            request.del(_this.options, function (error, response, body) {
+    }
+    deleteAPolygon(polyid) {
+        return new Promise((resolve, reject) => {
+            this.options.url += '/' + polyid + '?appid=' + main_1.main.appid;
+            request.del(this.options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -54,13 +50,11 @@ var SetUpPolygons = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
-    SetUpPolygons.prototype.updateAPolygon = function (polyid, name, coordinates) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            _this.options.url += '/' + polyid + '/' + "?appid=" + main_1.main.appid;
-            _this.options.body =
+    }
+    updateAPolygon(polyid, name) {
+        return new Promise((resolve, reject) => {
+            this.options.url += '/' + polyid + '/' + '?appid=' + main_1.main.appid;
+            this.options.body =
                 {
                     id: polyid,
                     name: name,
@@ -68,7 +62,7 @@ var SetUpPolygons = /** @class */ (function () {
                         "something": "something"
                     }
                 };
-            request.put(_this.options, function (error, response, body) {
+            request.put(this.options, function (error, response, body) {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -77,18 +71,16 @@ var SetUpPolygons = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
-    SetUpPolygons.prototype.getInfoForAPolygon = function (polyid) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
-                url: _this.urlAPI + '/' + polyid + '?appid=' + main_1.main.appid,
+    }
+    getInfoForAPolygon(polyid) {
+        return new Promise((resolve, reject) => {
+            let options = {
+                url: this.urlAPI + '/' + polyid + '?appid=' + main_1.main.appid,
                 headers: {
                     'User-Agent': 'request'
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -99,18 +91,16 @@ var SetUpPolygons = /** @class */ (function () {
                 // console.log(data.weather[0].main);
             });
         });
-    };
-    SetUpPolygons.prototype.getListOfPolygons = function () {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
-                url: _this.urlAPI + '?appid=' + main_1.main.appid,
+    }
+    getListOfPolygons() {
+        return new Promise((resolve, reject) => {
+            let options = {
+                url: this.urlAPI + '?appid=' + main_1.main.appid,
                 headers: {
                     'User-Agent': 'request'
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -121,7 +111,7 @@ var SetUpPolygons = /** @class */ (function () {
                 // console.log(data.weather[0].main);
             });
         });
-    };
-    return SetUpPolygons;
-}());
+    }
+}
 exports.SetUpPolygons = SetUpPolygons;
+//# sourceMappingURL=SetUpPolygons.js.map

@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var request = require("request");
-var main_1 = require("./main");
-var SoidData = /** @class */ (function () {
-    function SoidData() {
+const request = require("request");
+const main_1 = require("../main");
+class SoidData {
+    constructor() {
         this.urlAPI = main_1.main.url + 'soil';
         this.options = {
             body: {},
@@ -14,17 +14,15 @@ var SoidData = /** @class */ (function () {
             }
         };
     }
-    SoidData.prototype.getCurrentSoilData = function (polyid) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
-                url: _this.urlAPI + '?appid=' + main_1.main.appid + '&polyid=' + polyid,
+    getCurrentSoilData(polyid) {
+        return new Promise((resolve, reject) => {
+            let options = {
+                url: this.urlAPI + '?appid=' + main_1.main.appid + '&polyid=' + polyid,
                 headers: {
                     'User-Agent': 'request',
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -33,18 +31,16 @@ var SoidData = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
-    SoidData.prototype.getHistorySoil = function (polyid, start, end) {
-        var _this = this;
-        // @ts-ignore
-        return new Promise(function (resolve, reject) {
-            var options = {
-                url: _this.urlAPI + '/history?' + polyid + '&appid=' + main_1.main.appid + '&start=' + start + '&end=' + end,
+    }
+    getHistorySoil(polyid, start, end) {
+        return new Promise((resolve, reject) => {
+            let options = {
+                url: this.urlAPI + '/history?' + polyid + '&appid=' + main_1.main.appid + '&start=' + start + '&end=' + end,
                 headers: {
                     'User-Agent': 'request',
                 }
             };
-            request.get(options, function (error, response, body) {
+            request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
                 if (response.statusCode === 200)
@@ -53,7 +49,7 @@ var SoidData = /** @class */ (function () {
                     reject(response.statusCode);
             });
         });
-    };
-    return SoidData;
-}());
+    }
+}
 exports.SoidData = SoidData;
+//# sourceMappingURL=SoidData.js.map
