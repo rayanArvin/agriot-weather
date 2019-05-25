@@ -7,6 +7,12 @@ const SoidData_1 = require("./agromonitoring/SoidData");
 const AccumulatedParameters_1 = require("./agromonitoring/AccumulatedParameters");
 const SatelliteImagery_1 = require("./agromonitoring/SatelliteImagery");
 const UVI_1 = require("./agromonitoring/UVI");
+const GrowingDegreeDays_1 = require("./meteomatics/GrowingDegreeDays");
+const Evapotranspiration_1 = require("./meteomatics/Evapotranspiration ");
+const GrassLandTemperatureSum_1 = require("./meteomatics/GrassLandTemperatureSum");
+const LeafWetness_1 = require("./meteomatics/LeafWetness");
+const PhytophthoraNegative_1 = require("./meteomatics/PhytophthoraNegative");
+const MostSimilarYear_1 = require("./meteomatics/MostSimilarYear");
 class main {
     constructor() {
         let data = new Date();
@@ -90,7 +96,43 @@ class main {
         // }).catch(error => {
         //     console.log(error)
         // });
-        uvi.getHistoryUVI('5ce5069ad86170001b090d13', now - 1000000, now).then(body => {
+        // uvi.getHistoryUVI('5ce5069ad86170001b090d13',now - 1000000, now).then(body => {
+        //     console.log(body)
+        // }).catch(error => {
+        //     console.log(error)
+        // });
+        const gdd = new GrowingDegreeDays_1.GrowingDegreeDays();
+        gdd.getGDD('now', '50,10', 'json').then(body => {
+            console.log(body);
+        }).catch(error => {
+            console.log(error);
+        });
+        const ev = new Evapotranspiration_1.Evapotranspiration();
+        ev.getEV('now', '50,10', '1h', 'json').then(body => {
+            console.log(body);
+        }).catch(error => {
+            console.log(error);
+        });
+        const glts = new GrassLandTemperatureSum_1.GrassLandTemperatureSum();
+        glts.getGLTS('now', '50,10', 'json').then(body => {
+            console.log(body);
+        }).catch(error => {
+            console.log(error);
+        });
+        const lw = new LeafWetness_1.LeafWetness();
+        lw.getLW('now', '50,10', 'json').then(body => {
+            console.log(body);
+        }).catch(error => {
+            console.log(error);
+        });
+        const phn = new PhytophthoraNegative_1.PhytophthoraNegative();
+        phn.getPHN('now', '50,10', 'json').then(body => {
+            console.log(body);
+        }).catch(error => {
+            console.log(error);
+        });
+        const msy = new MostSimilarYear_1.MostSimilarYear();
+        msy.getMSY('now', '50,10', 'json').then(body => {
             console.log(body);
         }).catch(error => {
             console.log(error);
@@ -98,7 +140,8 @@ class main {
     }
 }
 main.appid = '3d4f37e5d802e3882a03c80fd423f59b';
-main.url = 'https://api.agromonitoring.com/agro/1.0/';
+main.agro_url = 'https://api.agromonitoring.com/agro/1.0/';
+main.meteo_url = 'https://api.meteomatics.com/';
 exports.main = main;
 new main();
 //# sourceMappingURL=main.js.map

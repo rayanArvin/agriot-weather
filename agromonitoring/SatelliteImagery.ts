@@ -3,7 +3,7 @@ import {main} from "../main";
 
 
 export class SatelliteImagery {
-    private urlAPI = main.url + "image/search";
+    private urlAPI = main.agro_url + "image/search";
     private options = {
         body: {},
         url: this.urlAPI,

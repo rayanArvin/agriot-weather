@@ -2,7 +2,7 @@ import request = require("request");
 import {main} from "../main";
 
 export class AccumulatedParameters {
-    private urlAPI = main.url + 'weather/history/';
+    private urlAPI = main.agro_url + 'weather/history/';
     private options = {
         body: {},
         url: this.urlAPI,

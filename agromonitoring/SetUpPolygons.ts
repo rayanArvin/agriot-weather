@@ -2,7 +2,7 @@ import request = require("request");
 import {main} from "../main";
 
 export class SetUpPolygons {
-    private urlAPI = main.url + "polygons";
+    private urlAPI = main.agro_url + "polygons";
     private options = {
         body: {},
         url: this.urlAPI,

@@ -4,7 +4,7 @@ const request = require("request");
 const main_1 = require("../main");
 class AccumulatedParameters {
     constructor() {
-        this.urlAPI = main_1.main.url + 'weather/history/';
+        this.urlAPI = main_1.main.agro_url + 'weather/history/';
         this.options = {
             body: {},
             url: this.urlAPI,

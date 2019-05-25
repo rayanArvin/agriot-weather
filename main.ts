@@ -6,11 +6,19 @@ import {SoidData} from "./agromonitoring/SoidData";
 import {AccumulatedParameters} from "./agromonitoring/AccumulatedParameters";
 import {SatelliteImagery} from "./agromonitoring/SatelliteImagery";
 import {UVI} from "./agromonitoring/UVI";
+import {GrowingDegreeDays} from "./meteomatics/GrowingDegreeDays";
+import {Evapotranspiration} from "./meteomatics/Evapotranspiration ";
+import {GrassLandTemperatureSum} from "./meteomatics/GrassLandTemperatureSum";
+import {LeafWetness} from "./meteomatics/LeafWetness";
+import {PhytophthoraNegative} from "./meteomatics/PhytophthoraNegative";
+import {MostSimilarYear} from "./meteomatics/MostSimilarYear";
 
 
 export class main {
-    public static appid:string = 'enter_your_appid';
-    public static url:string = 'https://api.agromonitoring.com/agro/1.0/';
+    public static appid:string = 'replace_your_appid';
+    public static Authorization:string = 'replace_your_authorization_key';
+    public static agro_url:string = 'https://api.agromonitoring.com/agro/1.0/';
+    public static meteo_url: string = 'https://api.meteomatics.com/';
     constructor() {
         let data = new Date();
         let now = data.getTime();
@@ -108,6 +116,47 @@ export class main {
         //     console.log(error)
         // });
 
+        const gdd = new GrowingDegreeDays();
+        gdd.getGDD('now','50,10','json').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
+
+        const ev = new Evapotranspiration();
+        ev.getEV('now', '50,10', '1h' , 'json').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
+
+        const glts = new GrassLandTemperatureSum();
+        glts.getGLTS('now', '50,10', 'json').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
+
+        const lw = new LeafWetness();
+        lw.getLW('now', '50,10', 'json').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
+
+        const phn = new PhytophthoraNegative();
+        phn.getPHN('now', '50,10', 'json').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
+
+        const msy = new MostSimilarYear();
+        msy.getMSY('now', '50,10', 'json').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
     }
 }
 

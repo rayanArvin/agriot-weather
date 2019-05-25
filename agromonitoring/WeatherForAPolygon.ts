@@ -2,7 +2,7 @@ import request = require("request");
 import {main} from "../main";
 
 export class WeatherForAPolygon {
-    private urlAPI = main.url + "weather";
+    private urlAPI = main.agro_url + "weather";
     private options = {
         body: {},
         url: this.urlAPI,

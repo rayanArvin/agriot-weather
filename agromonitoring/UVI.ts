@@ -2,7 +2,7 @@ import request = require("request");
 import {main} from "../main";
 
 export class UVI {
-    private urlAPI = main.url + "uvi";
+    private urlAPI = main.agro_url + "uvi";
     private options = {
         body: {},
         url: this.urlAPI,

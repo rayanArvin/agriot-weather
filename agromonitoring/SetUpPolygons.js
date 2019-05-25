@@ -4,7 +4,7 @@ const request = require("request");
 const main_1 = require("../main");
 class SetUpPolygons {
     constructor() {
-        this.urlAPI = main_1.main.url + "polygons";
+        this.urlAPI = main_1.main.agro_url + "polygons";
         this.options = {
             body: {},
             url: this.urlAPI,

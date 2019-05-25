@@ -2,7 +2,7 @@ import request = require("request");
 import {main} from "../main";
 
 export class SoidData {
-    private urlAPI = main.url + 'soil';
+    private urlAPI = main.agro_url + 'soil';
     private options = {
         body: {},
         url: this.urlAPI,

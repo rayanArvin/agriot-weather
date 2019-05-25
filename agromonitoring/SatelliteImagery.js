@@ -4,7 +4,7 @@ const request = require("request");
 const main_1 = require("../main");
 class SatelliteImagery {
     constructor() {
-        this.urlAPI = main_1.main.url + "image/search";
+        this.urlAPI = main_1.main.agro_url + "image/search";
         this.options = {
             body: {},
             url: this.urlAPI,

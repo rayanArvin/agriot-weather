@@ -4,7 +4,7 @@ const request = require("request");
 const main_1 = require("../main");
 class SoidData {
     constructor() {
-        this.urlAPI = main_1.main.url + 'soil';
+        this.urlAPI = main_1.main.agro_url + 'soil';
         this.options = {
             body: {},
             url: this.urlAPI,
