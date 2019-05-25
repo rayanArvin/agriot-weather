@@ -93,8 +93,6 @@ export class SetUpPolygons {
                     resolve(body);
                 else
                     reject(response.statusCode);
-                // const data = JSON.parse(body);
-                // console.log(data.weather[0].main);
             })
 
         });
@@ -115,8 +113,6 @@ export class SetUpPolygons {
                     resolve(body);
                 else
                     reject(response.statusCode);
-                // const data = JSON.parse(body);
-                // console.log(data.weather[0].main);
             })
         });
     }
