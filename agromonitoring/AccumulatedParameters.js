@@ -5,14 +5,6 @@ const main_1 = require("../main");
 class AccumulatedParameters {
     constructor() {
         this.urlAPI = main_1.main.agro_url + 'weather/history/';
-        this.options = {
-            body: {},
-            url: this.urlAPI,
-            json: true,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
     }
     getAccumulatedTemperatureByPolygon(polyid, start, end, threshold) {
         return new Promise((resolve, reject) => {

@@ -5,14 +5,6 @@ const main_1 = require("../main");
 class WeatherForAPolygon {
     constructor() {
         this.urlAPI = main_1.main.agro_url + "weather";
-        this.options = {
-            body: {},
-            url: this.urlAPI,
-            json: true,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
     }
     getCurrentWeather(polyid) {
         return new Promise((resolve, reject) => {

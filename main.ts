@@ -12,12 +12,14 @@
 // import {MostSimilarYear} from "./meteomatics/MostSimilarYear";
 
 
+import {SatelliteImagery} from "./agromonitoring/SatelliteImagery";
+
 export class main {
-    public static appid:string = 'replace_your_appid';
+    public static appid:string = '3d4f37e5d802e3882a03c80fd423f59b';
     public static Authorization:string = 'replace_your_authorization_key';
     public static agro_url:string = 'https://api.agromonitoring.com/agro/1.0/';
     public static meteo_url: string = 'https://api.meteomatics.com/';
-    // constructor() {
+    constructor() {
     //     let data = new Date();
     //     let now = data.getTime();
     //     // console.log(now)
@@ -93,7 +95,11 @@ export class main {
     //     // });
     //
     //     const satellite_imagery = new SatelliteImagery();
-    //     // satellite_imagery.getSearchSatelliteImagesForAPolygon('5ce11fecd861700028090cfd', 1500336000, 1508976000, )
+    //     satellite_imagery.getSearchSatelliteImagesForAPolygon('5cc702f1cfb98100076d857e', 1500336000, 1508976000 ).then(body =>{
+    //         console.log(body)
+    //     }).catch(error => {
+    //         console.log(error)
+    //     });
     //
     //     const uvi = new UVI();
     //     // uvi.getCurrentUVI('5ce5069ad86170001b090d13').then(body => {
@@ -155,7 +161,7 @@ export class main {
     //     }).catch(error => {
     //         console.log(error)
     //     });
-    // }
+    }
 }
 
 

@@ -5,14 +5,6 @@ const main_1 = require("../main");
 class SoidData {
     constructor() {
         this.urlAPI = main_1.main.agro_url + 'soil';
-        this.options = {
-            body: {},
-            url: this.urlAPI,
-            json: true,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
     }
     getCurrentSoilData(polyid) {
         return new Promise((resolve, reject) => {

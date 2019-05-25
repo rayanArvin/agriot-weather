@@ -16,12 +16,14 @@ export class PhytophthoraNegative {
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'phytophthora_negative:idx/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
-                if(error)
-                    reject(error);
-                if(response.statusCode === 200)
-                    resolve(body);
-                else
-                    reject(response.statusCode);
+                try {
+                    if (response.statusCode === 200)
+                        resolve(body);
+                    else
+                        reject(response.statusCode);
+                } catch(e) {
+                    reject(e);
+                }
                 // console.log(body.data[0].coordinates[0].dates)
             });
         });

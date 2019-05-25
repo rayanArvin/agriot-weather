@@ -31,7 +31,7 @@ class SetUpPolygons {
             request.post(this.options, function (error, response, body) {
                 if (error)
                     reject(error);
-                if (response.statusCode === 200)
+                if (response.statusCode === 201)
                     resolve(body);
                 else
                     reject(response.statusCode);
@@ -44,7 +44,7 @@ class SetUpPolygons {
             request.del(this.options, (error, response, body) => {
                 if (error)
                     reject(error);
-                if (response.statusCode === 200)
+                if (response.statusCode === 204)
                     resolve(body);
                 else
                     reject(response.statusCode);

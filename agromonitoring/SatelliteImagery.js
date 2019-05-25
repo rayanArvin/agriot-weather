@@ -5,14 +5,6 @@ const main_1 = require("../main");
 class SatelliteImagery {
     constructor() {
         this.urlAPI = main_1.main.agro_url + "image/search";
-        this.options = {
-            body: {},
-            url: this.urlAPI,
-            json: true,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
     }
     getSearchSatelliteImagesForAPolygon(polyid, start, end, resolution_min, resolution_max, type, coverage_max, coverage_min, clouds_max, clouds_min) {
         return new Promise((resolve, reject) => {
@@ -32,7 +24,6 @@ class SatelliteImagery {
                     resolve(body);
                 else
                     reject(response.statusCode);
-                console.log('getSearchSatelliteImagesForAPolygon ' + body);
             });
         });
     }

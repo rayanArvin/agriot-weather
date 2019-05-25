@@ -16,10 +16,14 @@ export class AccumulatedParameters {
             request.get(options, (error, response, body) => {
                 if (error)
                     reject(error);
-                if (response.statusCode === 200)
-                    resolve(body);
-                else
-                    reject(response.statusCode);
+                try {
+                    if (response.statusCode === 200)
+                        resolve(body);
+                    else
+                        reject(response.statusCode);
+                } catch(e) {
+                    reject(e);
+                }
             })
         });
 
@@ -34,12 +38,14 @@ export class AccumulatedParameters {
                 }
             };
             request.get(options,(error,response,body)=>{
-               if (error)
-                   reject(error);
-                if (response.statusCode === 200)
-                    resolve(body);
-                else
-                    reject(response.statusCode);
+                try {
+                    if (response.statusCode === 200)
+                        resolve(body);
+                    else
+                        reject(response.statusCode);
+                } catch(e) {
+                    reject(e);
+                }
             });
         });
     }

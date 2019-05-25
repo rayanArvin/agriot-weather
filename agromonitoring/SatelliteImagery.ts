@@ -20,12 +20,14 @@ export class SatelliteImagery {
                 }
             };
             request.get(options, (error:any, response:any, body:any) => {
-                if(error)
-                    reject(error);
-                if(response.statusCode === 200)
-                    resolve(body);
-                else
-                    reject(response.statusCode);
+                try {
+                    if (response.statusCode === 200)
+                        resolve(body);
+                    else
+                        reject(response.statusCode);
+                } catch(e) {
+                    reject(e);
+                }
             }) ;
         });
 
