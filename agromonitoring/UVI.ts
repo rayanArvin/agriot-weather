@@ -3,14 +3,7 @@ import {main} from "../main";
 
 export class UVI {
     private urlAPI = main.agro_url + "uvi";
-    private options = {
-        body: {},
-        url: this.urlAPI,
-        json: true,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
+
     getCurrentUVI(polyid: string){
         return new Promise((resolve, reject) => {
             let options: any = {

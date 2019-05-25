@@ -3,14 +3,7 @@ import {main} from "../main";
 
 export class SoidData {
     private urlAPI = main.agro_url + 'soil';
-    private options = {
-        body: {},
-        url: this.urlAPI,
-        json: true,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
+
     getCurrentSoilData(polyid:string){
         return new Promise((resolve, reject) => {
             let options = {
