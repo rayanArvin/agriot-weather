@@ -3,14 +3,7 @@ import {main} from "../main";
 
 export class WeatherForAPolygon {
     private urlAPI = main.agro_url + "weather";
-    private options = {
-        body: {},
-        url: this.urlAPI,
-        json: true,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
+
     getCurrentWeather(polyid: string) {
         return new Promise((resolve, reject) => {
             let options:any = {

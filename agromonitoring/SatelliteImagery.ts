@@ -4,14 +4,7 @@ import {main} from "../main";
 
 export class SatelliteImagery {
     private urlAPI = main.agro_url + "image/search";
-    private options = {
-        body: {},
-        url: this.urlAPI,
-        json: true,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
+
     getSearchSatelliteImagesForAPolygon(polyid:string, start:number, end:number, resolution_min: number,
                                         resolution_max:number, type:string, coverage_max:number, coverage_min:number,
                                         clouds_max:number, clouds_min: number)
@@ -33,7 +26,6 @@ export class SatelliteImagery {
                     resolve(body);
                 else
                     reject(response.statusCode);
-                console.log('getSearchSatelliteImagesForAPolygon ' + body);
             }) ;
         });
 

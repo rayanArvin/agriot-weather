@@ -3,14 +3,7 @@ import {main} from "../main";
 
 export class AccumulatedParameters {
     private urlAPI = main.agro_url + 'weather/history/';
-    private options = {
-        body: {},
-        url: this.urlAPI,
-        json: true,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
+
 
     getAccumulatedTemperatureByPolygon(polyid: string, start: number, end:number, threshold: number) {
         return new Promise((resolve, reject) => {

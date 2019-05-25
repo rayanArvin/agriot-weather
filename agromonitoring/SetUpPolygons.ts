@@ -46,7 +46,7 @@ export class SetUpPolygons {
             request.del(this.options, (error, response, body) => {
                 if (error)
                     reject(error);
-                if (response.statusCode === 200)
+                if (response.statusCode === 204)
                     resolve(body);
                 else
                     reject(response.statusCode);
