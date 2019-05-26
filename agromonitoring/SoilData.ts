@@ -1,7 +1,7 @@
 import request = require("request");
 import {main} from "../main";
 
-export class SoidData {
+export class SoilData {
     private urlAPI = main.agro_url + 'soil';
 
     getCurrentSoilData(polyid:string){

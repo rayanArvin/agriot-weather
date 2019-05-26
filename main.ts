@@ -1,18 +1,4 @@
-// import {WeatherForAPolygon} from "./agromonitoring/WeatherForAPolygon";
-// import {SetUpPolygons} from "./agromonitoring/SetUpPolygons";
-// import {SoidData} from "./agromonitoring/SoidData";
-// import {AccumulatedParameters} from "./agromonitoring/AccumulatedParameters";
-// import {SatelliteImagery} from "./agromonitoring/SatelliteImagery";
-// import {UVI} from "./agromonitoring/UVI";
-// import {GrowingDegreeDays} from "./meteomatics/GrowingDegreeDays";
-// import {Evapotranspiration} from "./meteomatics/Evapotranspiration ";
-// import {GrassLandTemperatureSum} from "./meteomatics/GrassLandTemperatureSum";
-// import {LeafWetness} from "./meteomatics/LeafWetness";
-// import {PhytophthoraNegative} from "./meteomatics/PhytophthoraNegative";
-// import {MostSimilarYear} from "./meteomatics/MostSimilarYear";
-
-
-import {SatelliteImagery} from "./agromonitoring/SatelliteImagery";
+import {WeatherForAPolygon} from "./agromonitoring/WeatherForAPolygon";
 
 export class main {
     public static appid:string = '3d4f37e5d802e3882a03c80fd423f59b';
@@ -23,12 +9,12 @@ export class main {
     //     let data = new Date();
     //     let now = data.getTime();
     //     // console.log(now)
-    //     const weather = new WeatherForAPolygon();
-    //     // weather.getCurrentWeather('5ce5069ad86170001b090d13').then(body => {
-    //     //     console.log(body)
-    //     // }).catch(error => {
-    //     //     console.log(error)
-    //     // });
+        const weather = new WeatherForAPolygon();
+        weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
+            console.log(body)
+        }).catch(error => {
+            console.log(error)
+        });
     //     // weather.getForecastWeather( '5cdfdb41d861700028090cee').then(body => {
     //     //
     //     // }).catch(error =>{
@@ -68,7 +54,7 @@ export class main {
     //     //
     //     // });
     //
-    //     const soil = new SoidData();
+    //     const soil = new SoilData();
     //     // soil.getCurrentSoilData('5ce11fecd861700028090cfd').then(body => {
     //     //
     //     // }).catch(error => {
