@@ -10,16 +10,16 @@ export class main {
     //     let now = data.getTime();
     //     // console.log(now)
         const weather = new WeatherForAPolygon();
-        weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
+        // weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
+        //     console.log(body)
+        // }).catch(error => {
+        //     console.log(error)
+        // });
+        weather.getForecastWeather( '5cc702f1cfb98100076d857e').then(body => {
             console.log(body)
-        }).catch(error => {
+        }).catch(error =>{
             console.log(error)
         });
-    //     // weather.getForecastWeather( '5cdfdb41d861700028090cee').then(body => {
-    //     //
-    //     // }).catch(error =>{
-    //     //
-    //     // });
     //     // weather.getHistoryWeather('5cc702f1cfb98100076d857e', now - 1000000, now).then(body =>{
     //     //
     //     // }).catch(error => {

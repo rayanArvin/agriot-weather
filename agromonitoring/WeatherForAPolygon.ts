@@ -17,13 +17,13 @@ export class WeatherForAPolygon {
             let options:any = {
                 url: this.urlAPI + '?polyid=' + polyid + '&appid=' + main.appid,
                 headers: {
-                    'User-Agent': 'request',
+                    'Content-Type': 'application/json',
                 }
             };
             request.get(options,(error:any,response:any,body:any) => {
                 try {
                     if (response.statusCode === 200) {
-                        const weatherData = new WeatherData().weather(body);
+                        const weatherData = new WeatherData().CurrentWeather(body);
                         resolve(weatherData);
                     } else
                         reject(response.statusCode);
@@ -37,15 +37,17 @@ export class WeatherForAPolygon {
     getForecastWeather(polyid: string) {
         return new Promise((resolve, reject) => {
             let options: any = {
+                url: this.urlAPI + '/forecast?polyid=' + polyid + '&appid=' + main.appid,
                 headers: {
-                    url: this.urlAPI + '/forecast?polyid=' + polyid + '&appid=' + main.appid,
-                    'User-Agent': 'request'
+                    'Content-Type': 'application/json',
                 }
             };
             request.get(options, (error: any, response: any, body: any) => {
                 try {
-                    if (response.statusCode === 200)
-                        resolve(body);
+                    if (response.statusCode === 200){
+                        const weatherDataS = new WeatherData().ForecastWeather(body);
+                        resolve(weatherDataS);
+                    }
                     else
                         reject(response.statusCode);
                 } catch(e) {
