@@ -1,5 +1,6 @@
 import request = require("request");
 import {main} from "../main";
+import {soilPersonal} from "../personal/soilPersonal";
 
 export class SoilData {
     private urlAPI = main.agro_url + 'soil';
@@ -14,8 +15,11 @@ export class SoilData {
             };
             request.get( options, (error, response, body) => {
                 try {
-                    if (response.statusCode === 200)
-                        resolve(body);
+                    if (response.statusCode === 200) {
+                        const soil = new soilPersonal().currentSoil(body);
+                        resolve(soil);
+                    }
+
                     else
                         reject(response.statusCode);
                 } catch(e) {

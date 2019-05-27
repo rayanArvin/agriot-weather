@@ -1,6 +1,6 @@
 import request = require("request");
 import {main} from "../main";
-import {WeatherData} from "../library/WeatherData";
+import {WeatherPersonal} from "../personal/weatherPersonal";
 
 export class WeatherForAPolygon {
     private urlAPI = main.agro_url + "weather";
@@ -23,7 +23,7 @@ export class WeatherForAPolygon {
             request.get(options,(error:any,response:any,body:any) => {
                 try {
                     if (response.statusCode === 200) {
-                        const weatherData = new WeatherData().CurrentWeather(body);
+                        const weatherData = new WeatherPersonal().CurrentWeather(body);
                         resolve(weatherData);
                     } else
                         reject(response.statusCode);
@@ -45,7 +45,7 @@ export class WeatherForAPolygon {
             request.get(options, (error: any, response: any, body: any) => {
                 try {
                     if (response.statusCode === 200){
-                        const weatherDataS = new WeatherData().ForecastWeather(body);
+                        const weatherDataS = new WeatherPersonal().ForecastWeather(body);
                         resolve(weatherDataS);
                     }
                     else

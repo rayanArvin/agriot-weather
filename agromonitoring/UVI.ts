@@ -1,5 +1,6 @@
 import request = require("request");
 import {main} from "../main";
+import {uviPersonal} from "../personal/uviPersonal";
 
 export class UVI {
     private urlAPI = main.agro_url + "uvi";
@@ -14,8 +15,10 @@ export class UVI {
             };
             request.get(options, (error:any,response:any,body:any) => {
                 try {
-                    if (response.statusCode === 200)
-                        resolve(body);
+                    if (response.statusCode === 200) {
+                        const uvi = new uviPersonal().currentUVI(body);
+                        resolve(uvi);
+                    }
                     else
                         reject(response.statusCode);
                 } catch(e) {

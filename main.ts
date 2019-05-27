@@ -1,4 +1,6 @@
 import {WeatherForAPolygon} from "./agromonitoring/WeatherForAPolygon";
+import {SoilData} from "./agromonitoring/SoilData";
+import {UVI} from "./agromonitoring/UVI";
 
 export class main {
     public static appid:string = '3d4f37e5d802e3882a03c80fd423f59b';
@@ -9,17 +11,17 @@ export class main {
     //     let data = new Date();
     //     let now = data.getTime();
     //     // console.log(now)
-        const weather = new WeatherForAPolygon();
-        // weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
+    //     const weather = new WeatherForAPolygon();
+    //     weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
+    //         console.log(body)
+    //     }).catch(error => {
+    //         console.log(error)
+    //     });
+        // weather.getForecastWeather( '5cc702f1cfb98100076d857e').then(body => {
         //     console.log(body)
-        // }).catch(error => {
+        // }).catch(error =>{
         //     console.log(error)
         // });
-        weather.getForecastWeather( '5cc702f1cfb98100076d857e').then(body => {
-            console.log(body)
-        }).catch(error =>{
-            console.log(error)
-        });
     //     // weather.getHistoryWeather('5cc702f1cfb98100076d857e', now - 1000000, now).then(body =>{
     //     //
     //     // }).catch(error => {
@@ -54,12 +56,12 @@ export class main {
     //     //
     //     // });
     //
-    //     const soil = new SoilData();
-    //     // soil.getCurrentSoilData('5ce11fecd861700028090cfd').then(body => {
-    //     //
-    //     // }).catch(error => {
-    //     //
-    //     // });
+        const soil = new SoilData();
+        // soil.getCurrentSoilData('5ce93013d86170001b090d49').then(body => {
+        //     console.log(body);
+        // }).catch(error => {
+        //     console.log(error);
+        // });
     //     // soil.getHistorySoil('5cc702f1cfb98100076d857e', now - 1000000, now).then(body => {
     //     //
     //     // }).catch(error => {
@@ -88,17 +90,17 @@ export class main {
     //     });
     //
     //     const uvi = new UVI();
-    //     // uvi.getCurrentUVI('5ce5069ad86170001b090d13').then(body => {
-    //     //     console.log(body)
-    //     // }).catch(error => {
-    //     //     console.log(error)
-    //     // });
+        // uvi.getCurrentUVI('5ce93013d86170001b090d49').then(body => {
+        //     console.log(body)
+        // }).catch(error => {
+        //     console.log(error)
+        // });
     //
-    //     // uvi.getForecastUVI('5ce5069ad86170001b090d13',10).then(body => {
-    //     //     console.log(body)
-    //     // }).catch(error => {
-    //     //     console.log(error)
-    //     // });
+    //     uvi.getForecastUVI('5ce93013d86170001b090d49',10).then(body => {
+    //         console.log(body)
+    //     }).catch(error => {
+    //         console.log(error)
+    //     });
     //
     //     // uvi.getHistoryUVI('5ce5069ad86170001b090d13',now - 1000000, now).then(body => {
     //     //     console.log(body)
