@@ -1,5 +1,6 @@
 import request = require("request");
 import {main} from "../main";
+import {Meteomatics} from "../personal/meteomatics";
 
 export class Evapotranspiration {
     private options = {
@@ -17,8 +18,10 @@ export class Evapotranspiration {
             this.options.url = main.meteo_url + datetime + '/' + 'evapotranspiration_' + interval + ':mm/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
-                    if (response.statusCode === 200)
-                        resolve(body);
+                    if (response.statusCode === 200){
+                        const meteomatics = new Meteomatics().ET(body);
+                        resolve(meteomatics);
+                    }
                     else
                         reject(response.statusCode);
                 } catch(e) {

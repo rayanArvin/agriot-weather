@@ -1,5 +1,6 @@
 import request = require("request");
 import {main} from "../main";
+import {Meteomatics} from "../personal/meteomatics";
 
 export class GrassLandTemperatureSum {
     private options = {
@@ -15,10 +16,12 @@ export class GrassLandTemperatureSum {
     getGLTS(datetime:string, location:string, format:string){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'grass_land_temperature_sum:C/' + location + '/' + format;
-            request.get(this.options, (error,response,body)=>{
+            request.get(this.options, (error,response,body) => {
                 try {
-                    if (response.statusCode === 200)
-                        resolve(body);
+                    if (response.statusCode === 200){
+                        const meteomatics = new Meteomatics().GLTS(body);
+                        resolve(meteomatics);
+                    }
                     else
                         reject(response.statusCode);
                 } catch(e) {

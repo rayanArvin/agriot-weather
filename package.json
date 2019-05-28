@@ -12,6 +12,7 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "mstranslator": "^3.0.0",
     "yarn": "^1.16.0"
   },
   "private": false

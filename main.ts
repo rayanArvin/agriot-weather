@@ -1,15 +1,14 @@
-import {WeatherForAPolygon} from "./agromonitoring/WeatherForAPolygon";
-import {SoilData} from "./agromonitoring/SoilData";
-import {UVI} from "./agromonitoring/UVI";
+
+
 
 export class main {
     public static appid:string = '3d4f37e5d802e3882a03c80fd423f59b';
-    public static Authorization:string = 'replace_your_authorization_key';
+    public static Authorization:string = 'Basic c2FtYWNvbnRyb2xfZWJhZGk6MkwxUnlQUzhqbEt3cg==';
     public static agro_url:string = 'https://api.agromonitoring.com/agro/1.0/';
     public static meteo_url: string = 'https://api.meteomatics.com/';
     constructor() {
-    //     let data = new Date();
-    //     let now = data.getTime();
+        let data = new Date();
+        let now = data.getTime();
     //     // console.log(now)
     //     const weather = new WeatherForAPolygon();
     //     weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
@@ -45,18 +44,18 @@ export class main {
     //     // }).catch(error => {
     //     //
     //     // });
-    //     // polygons.getInfoForAPolygon('5cdfd9e3d861700028090cec').then(body => {
-    //     //
-    //     // }).catch(error => {
-    //     //
-    //     // });
+    //     polygons.getInfoForAPolygon('5cc702f1cfb98100076d857e').then(body => {
+    //         console.log(body);
+    //     }).catch(error => {
+    //         console.log(error);
+    //     });
     //     // polygons.getListOfPolygons().then(body => {
     //     //
     //     // }).catch(error => {
     //     //
     //     // });
     //
-        const soil = new SoilData();
+    //     const soil = new SoilData();
         // soil.getCurrentSoilData('5ce93013d86170001b090d49').then(body => {
         //     console.log(body);
         // }).catch(error => {
@@ -143,12 +142,6 @@ export class main {
     //         console.log(error)
     //     });
     //
-    //     const msy = new MostSimilarYear();
-    //     msy.getMSY('now', '50,10', 'json').then(body => {
-    //         console.log(body)
-    //     }).catch(error => {
-    //         console.log(error)
-    //     });
     }
 }
 
