@@ -8,7 +8,7 @@ export class WeatherPersonal {
         this.WeatherPersonal.weatherMain = body.weather[0].main;
         this.WeatherPersonal.weatherDescription = body.weather[0].description;
         this.WeatherPersonal.weatherIcon = body.weather[0].icon;
-        this.WeatherPersonal.mainTemp = + Math.round(body.main.temp -273);
+        this.WeatherPersonal.mainTemp = + Math.round(body.main.temp - 273);
         this.WeatherPersonal.mainPressure = body.main.pressure;
         this.WeatherPersonal.mainHumidity = body.main.humidity;
         this.WeatherPersonal.mainTemp_min = + Math.round(body.main.temp_min - 273);
