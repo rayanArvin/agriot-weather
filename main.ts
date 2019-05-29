@@ -1,4 +1,4 @@
-import {WeatherForAPolygon} from "./agromonitoring/WeatherForAPolygon";
+// import {WeatherForAPolygon} from "./agromonitoring/WeatherForAPolygon";
 
 export class main {
     public static appid:string = '3d4f37e5d802e3882a03c80fd423f59b';
@@ -9,12 +9,12 @@ export class main {
         // let data = new Date();
         // let now = data.getTime();
     //     // console.log(now)
-        const weather = new WeatherForAPolygon();
-        weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
-            console.log(body)
-        }).catch(error => {
-            console.log(error)
-        });
+    //     const weather = new WeatherForAPolygon();
+    //     weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
+    //         console.log(body)
+    //     }).catch(error => {
+    //         console.log(error)
+    //     });
         // weather.getForecastWeather( '5cc702f1cfb98100076d857e').then(body => {
         //     console.log(body)
         // }).catch(error =>{
@@ -144,5 +144,5 @@ export class main {
 }
 
 
-
-new main();
+//
+// new main();
