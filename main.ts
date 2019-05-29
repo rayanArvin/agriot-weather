@@ -47,11 +47,11 @@ export class main {
     //     }).catch(error => {
     //         console.log(error);
     //     });
-    //     // polygons.getListOfPolygons().then(body => {
-    //     //
-    //     // }).catch(error => {
-    //     //
-    //     // });
+    //     polygons.getListOfPolygons().then(body => {
+    //         console.log(body);
+    //     }).catch(error => {
+    //         console.log(error);
+    //     });
     //
     //     const soil = new SoilData();
         // soil.getCurrentSoilData('5ce93013d86170001b090d49').then(body => {

@@ -6,7 +6,7 @@ export class Meteomatics {
     public GDD(body, location){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
-        this.Meteomatics.dataCordinates = location;
+        this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
         this.Meteomatics.allData = body;
@@ -16,7 +16,7 @@ export class Meteomatics {
     public ET(body, location){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
-        this.Meteomatics.dataCordinates = location;
+        this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
         this.Meteomatics.allData = body;
@@ -26,7 +26,7 @@ export class Meteomatics {
     public GLTS(body, location){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
-        this.Meteomatics.dataCordinates = location;
+        this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
         this.Meteomatics.allData = body;
@@ -36,7 +36,7 @@ export class Meteomatics {
     public LW(body, location){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
-        this.Meteomatics.dataCordinates = location;
+        this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
         this.Meteomatics.allData = body;
@@ -46,7 +46,7 @@ export class Meteomatics {
     public PHN(body, location){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
-        this.Meteomatics.dataCordinates = location;
+        this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
         this.Meteomatics.allData = body;
