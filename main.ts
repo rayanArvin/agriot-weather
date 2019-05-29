@@ -5,8 +5,8 @@ export class main {
     public static agro_url:string = 'https://api.agromonitoring.com/agro/1.0/';
     public static meteo_url: string = 'https://api.meteomatics.com/';
     constructor() {
-        let data = new Date();
-        let now = data.getTime();
+        // let data = new Date();
+        // let now = data.getTime();
     //     // console.log(now)
     //     const weather = new WeatherForAPolygon();
     //     weather.getCurrentWeather('5cc702f1cfb98100076d857e').then(body => {
@@ -144,4 +144,4 @@ export class main {
 
 
 
-new main();
+// new main();
