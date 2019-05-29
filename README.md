@@ -6,6 +6,6 @@ This library works with different service providers like:
 - __meteomatics__
 
 Todoes:
-- [ ] translate data to persian
+- [x] change meteomatics data to csv!
 - [ ] prepare data stucture for getting meteomatics with basic weather parameter.
 - [ ] prepare satellite imagery
