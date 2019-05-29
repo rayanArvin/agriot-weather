@@ -19,7 +19,7 @@ export class GrowingDegreeDays {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().GDD(body);
+                        const gdd = new Meteomatics().GDD(body, location);
                         resolve(gdd);
                     }
                     else

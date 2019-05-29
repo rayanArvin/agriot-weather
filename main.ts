@@ -1,6 +1,4 @@
 
-
-
 export class main {
     public static appid:string = '3d4f37e5d802e3882a03c80fd423f59b';
     public static Authorization:string = 'Basic c2FtYWNvbnRyb2xfZWJhZGk6MkwxUnlQUzhqbEt3cg==';
@@ -108,40 +106,39 @@ export class main {
     //     // });
     //
     //     const gdd = new GrowingDegreeDays();
-    //     gdd.getGDD('now','50,10','json').then(body => {
+    //     gdd.getGDD('2019-05-28T00:00:00ZP20D:P1D','50,10','csv').then(body => {
     //         console.log(body)
     //     }).catch(error => {
     //         console.log(error)
     //     });
     //
     //     const ev = new Evapotranspiration();
-    //     ev.getEV('now', '50,10', '1h' , 'json').then(body => {
+    //     ev.getEV('now', '50,10', '1h' , 'csv').then(body => {
     //         console.log(body)
     //     }).catch(error => {
     //         console.log(error)
     //     });
     //
     //     const glts = new GrassLandTemperatureSum();
-    //     glts.getGLTS('now', '50,10', 'json').then(body => {
+    //     glts.getGLTS('now', '50,10', 'csv').then(body => {
     //         console.log(body)
     //     }).catch(error => {
     //         console.log(error)
     //     });
     //
     //     const lw = new LeafWetness();
-    //     lw.getLW('now', '50,10', 'json').then(body => {
+    //     lw.getLW('now', '50,10', 'csv').then(body => {
     //         console.log(body)
     //     }).catch(error => {
     //         console.log(error)
     //     });
     //
     //     const phn = new PhytophthoraNegative();
-    //     phn.getPHN('now', '50,10', 'json').then(body => {
+    //     phn.getPHN('now', '50,10', 'csv').then(body => {
     //         console.log(body)
     //     }).catch(error => {
     //         console.log(error)
     //     });
-    //
     }
 }
 

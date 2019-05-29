@@ -19,7 +19,7 @@ export class Evapotranspiration {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().ET(body);
+                        const meteomatics = new Meteomatics().ET(body,location);
                         resolve(meteomatics);
                     }
                     else

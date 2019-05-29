@@ -19,7 +19,7 @@ export class LeafWetness {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().LW(body);
+                        const meteomatics = new Meteomatics().LW(body, location);
                         resolve(meteomatics);
                     }
                     else

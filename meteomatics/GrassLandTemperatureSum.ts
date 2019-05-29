@@ -19,7 +19,7 @@ export class GrassLandTemperatureSum {
             request.get(this.options, (error,response,body) => {
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().GLTS(body);
+                        const meteomatics = new Meteomatics().GLTS(body, location);
                         resolve(meteomatics);
                     }
                     else
