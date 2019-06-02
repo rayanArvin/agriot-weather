@@ -16,7 +16,7 @@ export class UVI {
             request.get(options, (error:any,response:any,body:any) => {
                 try {
                     if (response.statusCode === 200) {
-                        const uvi = new uviPersonal().currentUVI(body);
+                        const uvi = new uviPersonal().currentUVI(body , polyid);
                         resolve(uvi);
                     }
                     else

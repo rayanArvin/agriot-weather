@@ -16,7 +16,7 @@ export class SoilData {
             request.get( options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const soil = new soilPersonal().currentSoil(body);
+                        const soil = new soilPersonal().currentSoil(body , polyid);
                         resolve(soil);
                     }
 

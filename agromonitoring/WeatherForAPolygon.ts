@@ -23,7 +23,7 @@ export class WeatherForAPolygon {
             request.get(options,(error:any,response:any,body:any) => {
                 try {
                     if (response.statusCode === 200) {
-                        const weatherData = new WeatherPersonal().CurrentWeather(body);
+                        const weatherData = new WeatherPersonal().CurrentWeather(body , polyid);
                         resolve(weatherData);
                     } else
                         reject(response.statusCode);
@@ -45,7 +45,7 @@ export class WeatherForAPolygon {
             request.get(options, (error: any, response: any, body: any) => {
                 try {
                     if (response.statusCode === 200){
-                        const weatherDataS = new WeatherPersonal().ForecastWeather(body);
+                        const weatherDataS = new WeatherPersonal().ForecastWeather(body , polyid);
                         resolve(weatherDataS);
                     }
                     else
