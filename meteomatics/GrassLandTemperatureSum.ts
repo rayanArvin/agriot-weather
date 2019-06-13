@@ -9,7 +9,7 @@ export class GrassLandTemperatureSum {
         json: true,
         headers: {
             'Content-Type': 'application/json',
-            Authorization: main.Authorization,
+            Authorization: main.meteoAuthorization,
         }
     };
 

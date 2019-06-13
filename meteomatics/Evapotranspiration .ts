@@ -9,7 +9,7 @@ export class Evapotranspiration {
         json: true,
         headers: {
             'Content-Type': 'application/json',
-            Authorization: main.Authorization,
+            Authorization: main.meteoAuthorization,
         }
     };
 
