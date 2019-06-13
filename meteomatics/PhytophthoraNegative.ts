@@ -13,7 +13,7 @@ export class PhytophthoraNegative {
         }
     };
 
-    getPHN(datetime:string, location:string, format:string){
+    getPHN(datetime:string, location:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'phytophthora_negative:idx/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{

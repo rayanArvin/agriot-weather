@@ -13,7 +13,7 @@ export class Evapotranspiration {
         }
     };
 
-    getEV(datetime:string, location:string, interval:string, format:string){
+    getEV(datetime:string, location:string, interval:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'evapotranspiration_' + interval + ':mm/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{

@@ -13,7 +13,12 @@ export class GrowingDegreeDays {
         }
     };
 
-    getGDD(datetime:string, location:string, format:string){
+    getGDD(datetime:string, location:string, format:string = 'csv'){
+        /*
+        --- example ---
+        datetime = 2019-05-28T00:00:00ZP20D:P1D
+        location = 50,10
+        */
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'growing_degree_days_accumulated:gdd/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
