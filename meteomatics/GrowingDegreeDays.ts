@@ -20,7 +20,8 @@ export class GrowingDegreeDays {
         location = 50,10
         */
         return new Promise((resolve, reject) => {
-            this.options.url = main.meteo_url + datetime + '/' + 'growing_degree_days_accumulated:gdd/' + location + '/' + format;
+            this.options.url = main.meteo_url + datetime
+                 + 'P20D:P1D/' + 'growing_degree_days_accumulated:gdd/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
