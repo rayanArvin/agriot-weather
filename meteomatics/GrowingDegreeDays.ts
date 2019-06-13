@@ -13,7 +13,7 @@ export class GrowingDegreeDays {
         }
     };
 
-    getGDD(datetime:string, location:string, format:string = 'csv'){
+    getGDD(ID:string , datetime:string, location:string, format:string = 'csv'){
         /*
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
@@ -25,7 +25,7 @@ export class GrowingDegreeDays {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().GDD(body, location);
+                        const gdd = new Meteomatics().GDD(body, location , ID);
                         resolve(gdd);
                     }
                     else
