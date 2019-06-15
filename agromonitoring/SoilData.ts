@@ -29,7 +29,7 @@ export class SoilData {
         });
     }
 
-    getHistorySoil(polyid:string ,start:number ,end:number){
+    getHistorySoilData(polyid:string ,start:number ,end:number){
         return new Promise((resolve, reject) => {
             let options = {
                 url: this.urlAPI + '/history?' +polyid+'&appid=' + main.appid + '&start='+start + '&end=' + end,
