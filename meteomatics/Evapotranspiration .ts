@@ -13,13 +13,13 @@ export class Evapotranspiration {
         }
     };
 
-    getEV(datetime:string, location:string, interval:string, format:string = 'csv'){
+    getEV(ID: string , datetime:string, location:string, interval:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'evapotranspiration_' + interval + ':mm/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().ET(body,location);
+                        const meteomatics = new Meteomatics().ET(body,location,ID);
                         resolve(meteomatics);
                     }
                     else

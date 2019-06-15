@@ -14,9 +14,10 @@ export class Meteomatics {
         return this.Meteomatics;
     }
 
-    public ET(body, location){
+    public ET(body, location , ID){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
         this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
