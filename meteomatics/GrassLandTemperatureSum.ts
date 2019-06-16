@@ -13,13 +13,13 @@ export class GrassLandTemperatureSum {
         }
     };
 
-    getGLTS(datetime:string, location:string, format:string = 'csv'){
+    getGLTS(ID_polygon: string , datetime:string, location:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'grass_land_temperature_sum:C/' + location + '/' + format;
             request.get(this.options, (error,response,body) => {
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().GLTS(body, location);
+                        const meteomatics = new Meteomatics().GLTS(body, location , ID_polygon);
                         resolve(meteomatics);
                     }
                     else
