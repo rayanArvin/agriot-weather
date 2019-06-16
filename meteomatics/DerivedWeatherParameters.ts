@@ -424,6 +424,8 @@ export class DerivedWeatherParameters {
         });
     }
 
+
+    // Stratospheric Polar Vortex (SPV): Wind speed
     getSPV(ID:string , datetime:string, location:string, level:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'polar_vortex_' + level + ':ms/' + location + '/' + format;
