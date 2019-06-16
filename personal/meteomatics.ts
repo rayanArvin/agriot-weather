@@ -35,9 +35,10 @@ export class Meteomatics {
         return this.Meteomatics;
     }
 
-    public LW(body, location){
+    public LW(body, location , ID){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
         this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
