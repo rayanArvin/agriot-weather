@@ -13,13 +13,13 @@ export class LeafWetness {
         }
     };
 
-    getLW(datetime:string, location:string, format:string = 'csv'){
+    getLW(ID_polygon: string , datetime:string, location:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'leaf_wetness:idx/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().LW(body, location);
+                        const meteomatics = new Meteomatics().LW(body, location , ID_polygon);
                         resolve(meteomatics);
                     }
                     else
