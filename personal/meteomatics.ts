@@ -4,7 +4,9 @@ export class Meteomatics {
     private Meteomatics: any = {};
     private SP = 'meteomatics';
 
-    /* Agricultural Parameters */
+    /////////////////////////////////////////////////////
+    /* ------------Agricultural Parameters------------ */
+    /////////////////////////////////////////////////////
 
     public GDD(body, location , ID){
         body = csv.csv2array(body,';');
@@ -59,8 +61,9 @@ export class Meteomatics {
         this.Meteomatics.allData = body;
         return this.Meteomatics;
     }
-
-    /*  Derived Weather Parameters */
+    /////////////////////////////////////////////////////////
+    /*  ------------Derived Weather Parameters------------ */
+    /////////////////////////////////////////////////////////
 
     public WeatherSymbol(body, location , ID){
         body = csv.csv2array(body,';');
@@ -179,7 +182,7 @@ export class Meteomatics {
         this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
-        this.Meteomatics.allData = body;d
+        this.Meteomatics.allData = body;
         return this.Meteomatics;
     }
 
@@ -190,7 +193,7 @@ export class Meteomatics {
         this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
-        this.Meteomatics.allData = body;d
+        this.Meteomatics.allData = body;
         return this.Meteomatics;
     }
 
@@ -371,6 +374,450 @@ export class Meteomatics {
     }
 
     public DroughtIndex(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    //////////////////////////////////////////////////////
+    /* ------------Basic Weather Parameters------------ */
+    //////////////////////////////////////////////////////
+
+    public ImmediateTemperature(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public IntervalValuesOfTheTemperature(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public RelativeHumidity(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AbsoluteHumidity(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public InstantaneousDewPoint(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public PressureAdjustedToSeaLevel(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public SurfacePressure(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public SurfacePressureMean(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public PressureAtHigherAltitudes(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public MeanPressureAtHigherAltitudes(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AtmosphericDensity(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public InstantaneousWindSpeed(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public InstantaneousWindDirection(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public WindSpeedU(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public WindSpeedV(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public IntervalWindSpeed(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public IntervalWindGusts(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public IntervalWindDirection(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AmountOfCloudCover(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AccumulatedPrecipitation(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public PrecipitationType(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public PrecipitationLayer5Min(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public PrecipitationProbability(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public Hail(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public HailInterval(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AccumulatedEvaporation(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public CAPE(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public LiftedIndex(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public ThunderstormProbabilities(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public FrostDepth(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AmountOfSnowMelt(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AmountOfFreshSnow(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public SnowDepth(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public GeopotentialHeight(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public ClearSkyRadiationInstantaneousFlux(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public ClearSkyRadiationAccumulatedEnergy(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public DiffuseRadiationInstantaneousFlux(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public DirectRadiationInstantaneousFlux(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public GlobalRadiationInstantaneousFlux(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public AccumulatedEnergy(body, location , ID){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
         this.Meteomatics.polygonID = ID;

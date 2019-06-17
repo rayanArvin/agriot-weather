@@ -11,17 +11,23 @@ class GrowingDegreeDays {
             json: true,
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: main_1.main.Authorization,
+                Authorization: main_1.main.meteoAuthorization,
             }
         };
     }
-    getGDD(datetime, location, format) {
+    getGDD(ID, datetime, location, format = 'csv') {
+        /*
+        --- example ---
+        datetime = 2019-05-28T00:00:00ZP20D:P1D
+        location = 50,10
+        */
         return new Promise((resolve, reject) => {
-            this.options.url = main_1.main.meteo_url + datetime + '/' + 'growing_degree_days_accumulated:gdd/' + location + '/' + format;
+            this.options.url = main_1.main.meteo_url + datetime
+                + 'P20D:P1D/' + 'growing_degree_days_accumulated:gdd/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const gdd = new meteomatics_1.Meteomatics().GDD(body, location);
+                        const gdd = new meteomatics_1.Meteomatics().GDD(body, location, ID);
                         resolve(gdd);
                     }
                     else

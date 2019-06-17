@@ -11,17 +11,17 @@ class LeafWetness {
             json: true,
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: main_1.main.Authorization,
+                Authorization: main_1.main.meteoAuthorization,
             }
         };
     }
-    getLW(datetime, location, format) {
+    getLW(ID_polygon, datetime, location, format = 'csv') {
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'leaf_wetness:idx/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().LW(body, location);
+                        const meteomatics = new meteomatics_1.Meteomatics().LW(body, location, ID_polygon);
                         resolve(meteomatics);
                     }
                     else

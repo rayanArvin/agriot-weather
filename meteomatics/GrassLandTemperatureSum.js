@@ -11,17 +11,17 @@ class GrassLandTemperatureSum {
             json: true,
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: main_1.main.Authorization,
+                Authorization: main_1.main.meteoAuthorization,
             }
         };
     }
-    getGLTS(datetime, location, format) {
+    getGLTS(ID_polygon, datetime, location, format = 'csv') {
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'grass_land_temperature_sum:C/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().GLTS(body, location);
+                        const meteomatics = new meteomatics_1.Meteomatics().GLTS(body, location, ID_polygon);
                         resolve(meteomatics);
                     }
                     else

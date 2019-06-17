@@ -26,7 +26,7 @@ class WeatherForAPolygon {
             request.get(options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const weatherData = new weatherPersonal_1.WeatherPersonal().CurrentWeather(body);
+                        const weatherData = new weatherPersonal_1.WeatherPersonal().CurrentWeather(body, polyid);
                         resolve(weatherData);
                     }
                     else
@@ -50,7 +50,7 @@ class WeatherForAPolygon {
             request.get(options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const weatherDataS = new weatherPersonal_1.WeatherPersonal().ForecastWeather(body);
+                        const weatherDataS = new weatherPersonal_1.WeatherPersonal().ForecastWeather(body, polyid);
                         resolve(weatherDataS);
                     }
                     else

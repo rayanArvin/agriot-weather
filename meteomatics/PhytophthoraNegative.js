@@ -11,11 +11,11 @@ class PhytophthoraNegative {
             json: true,
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: main_1.main.Authorization,
+                Authorization: main_1.main.meteoAuthorization,
             }
         };
     }
-    getPHN(datetime, location, format) {
+    getPHN(datetime, location, format = 'csv') {
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'phytophthora_negative:idx/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {

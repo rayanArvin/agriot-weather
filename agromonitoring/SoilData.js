@@ -18,7 +18,7 @@ class SoilData {
             request.get(options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const soil = new soilPersonal_1.soilPersonal().currentSoil(body);
+                        const soil = new soilPersonal_1.soilPersonal().currentSoil(body, polyid);
                         resolve(soil);
                     }
                     else
@@ -30,7 +30,7 @@ class SoilData {
             });
         });
     }
-    getHistorySoil(polyid, start, end) {
+    getHistorySoilData(polyid, start, end) {
         return new Promise((resolve, reject) => {
             let options = {
                 url: this.urlAPI + '/history?' + polyid + '&appid=' + main_1.main.appid + '&start=' + start + '&end=' + end,

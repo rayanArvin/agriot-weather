@@ -11,17 +11,17 @@ class Evapotranspiration {
             json: true,
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: main_1.main.Authorization,
+                Authorization: main_1.main.meteoAuthorization,
             }
         };
     }
-    getEV(datetime, location, interval, format) {
+    getET(ID, datetime, location, interval, format = 'csv') {
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'evapotranspiration_' + interval + ':mm/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().ET(body, location);
+                        const meteomatics = new meteomatics_1.Meteomatics().ET(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
