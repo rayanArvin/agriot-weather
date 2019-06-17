@@ -179,7 +179,18 @@ export class Meteomatics {
         this.Meteomatics.dataCoordinates = location;
         this.Meteomatics.dataParameter = body[0][1];
         body.shift();
-        this.Meteomatics.allData = body;
+        this.Meteomatics.allData = body;d
+        return this.Meteomatics;
+    }
+
+    public ApparentTemperature(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;d
         return this.Meteomatics;
     }
 
@@ -294,6 +305,17 @@ export class Meteomatics {
     }
 
     public MoehlinJetIndex(body, location , ID){
+        body = csv.csv2array(body,';');
+        this.Meteomatics.api = this.SP;
+        this.Meteomatics.polygonID = ID;
+        this.Meteomatics.dataCoordinates = location;
+        this.Meteomatics.dataParameter = body[0][1];
+        body.shift();
+        this.Meteomatics.allData = body;
+        return this.Meteomatics;
+    }
+
+    public SantaAnaWindIndex(body, location , ID){
         body = csv.csv2array(body,';');
         this.Meteomatics.api = this.SP;
         this.Meteomatics.polygonID = ID;

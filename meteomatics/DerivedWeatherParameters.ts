@@ -327,10 +327,11 @@ export class DerivedWeatherParameters {
             index = idx, P
             */
         return new Promise((resolve, reject) => {
-            if (index == "idx"){
-                const parameter = 'is_slippery_road_';
+            let parameter:string= '';
+            if (index == "idx") {
+                let parameter = 'is_slippery_road_';
             } else {
-                const parameter = 'prob_slippery_road_';
+                let parameter = 'prob_slippery_road_';
             }
             this.options.url = main.meteo_url + datetime + '/' + parameter + interval + ':'+ index +'/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
