@@ -10,5 +10,5 @@ main.meteoAuthorization = 'Basic cmF5YW5faGVpZGFyeTpYNXhtNm5BcloyU3BP';
 main.agro_url = 'https://api.agromonitoring.com/agro/1.0/';
 main.meteo_url = 'https://api.meteomatics.com/';
 exports.main = main;
-// new main(); 
+// new main();
 //# sourceMappingURL=main.js.map
