@@ -20,8 +20,8 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = C, F, K
-        level = -150cm, -50cm, 0m, 2m, 1000hPa
+        Available levels: -150cm, -50cm, -15cm, -5cm, 0m, 2m, 100m - 10000m (continuously), 1000hPa, 975hPa, 950hPa, 925hPa, 900hPa, 875hPa, 850hPa, 825hPa, 800hPa, 775hPa, 750hPa, 700hPa, 650hPa, 600hPa, 550hPa, 500hPa, 450hPa, 400hPa, 350hPa, 300hPa, 200hPa, 50hPa, 10hPa
+        Available units: C, K, F
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 't_' + level + ':' + unit + '/' + location + '/' + format;
@@ -46,10 +46,10 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = C, F, K
-        level = -150cm, -50cm, 0m, 2m, 1000hPa
-        measure = mean, min, max
-        interval = 1h, 3h, 6h, 12h, 24h
+        Available levels: 0m, 2m, 1000hPa, 950hPa, 925hPa, 900hPa, 850hPa, 800hPa, 700hPa, 500hPa, 300hPa -150cm, -50cm, -15cm, -5cm
+        Available measures: mean, min, max
+        Available intervals: 1h, 3h, 6h, 12h, 24h
+        Available units: C, K, F
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 't_' + measure + '_' + level + '_' + interval + ':' + unit + '/' + location + '/' + format;
@@ -74,8 +74,8 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = p
-        level = 2m, 1000hPa, 950hPa, 925hPa, 900hPa, 850hPa, 800hPa, 700hPa, 500hPa, 300hPa
+        Available levels: 2m, 1000hPa, 950hPa, 925hPa, 900hPa, 850hPa, 800hPa, 700hPa, 500hPa, 300hPa
+        Available units: p
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'relative_humidity_' + level + ':' + unit + '/' + location + '/' + format;
@@ -97,10 +97,10 @@ class BasicWeatherParameters {
     }
     getAbsoluteHumidity(ID, datetime, location, format = 'csv') {
         /*
-            --- example ---
-            datetime = 2019-05-28T00:00:00ZP20D:P1D
-            location = 50,10
-            */
+        --- example ---
+        datetime = 2019-05-28T00:00:00ZP20D:P1D
+        location = 50,10
+        */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime
                 + 'absolute_humidity_2m:gm3/' + location + '/' + format;
@@ -125,8 +125,8 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = C, K, F
-        level = 2m, 1000hPa, 950hPa, 925hPa, 900hPa, 850hPa, 800hPa, 700hPa, 500hPa, 300hPa
+        Available levels: 2m, 1000hPa, 950hPa, 925hPa, 900hPa, 850hPa, 800hPa, 700hPa, 500hPa, 300hPa
+        Available units: C, K, F
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'dew_point_' + level + ':' + unit + '/' + location + '/' + format;
@@ -151,7 +151,7 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = hPa, Pa
+        Available units: hPa, Pa
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'msl_pressure' + ':' + unit + '/' + location + '/' + format;
@@ -176,7 +176,7 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = hPa, Pa
+        Available units: hPa, Pa
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'sfc_pressure' + ':' + unit + '/' + location + '/' + format;
@@ -201,8 +201,8 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = hPa, Pa
-        interval = 1h, 3h, 6h, 12h, 24h
+        Available intervals: 1h, 3h, 6h, 12h, 24h
+        Available units: hPa, Pa
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'sfc_pressure_mean_' + interval + ':' + unit + '/' + location + '/' + format;
@@ -227,7 +227,7 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        level = 1m to 10000m
+        Available altitude levels: 1m to 10000m
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'pressure_' + level + ':' + unit + '/' + location + '/' + format;
@@ -252,8 +252,8 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        unit = hPa, Pa
-        interval = 1h, 3h, 6h, 12h, 24h
+        Available intervals: 1h, 3h, 6h, 12h, 24h
+        Available units: hPa, Pa
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'pressure_mean_' + level + '_' + interval + ':' + unit + '/' + location + '/' + format;
@@ -278,8 +278,8 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        level = 1m to 10000m
-        unit = kgm3
+        Available altitude levels: 0m to 10000m
+        Available units: kgm3
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'air_density_' + level + ':' + unit + '/' + location + '/' + format;
@@ -304,8 +304,9 @@ class BasicWeatherParameters {
         --- example ---
         datetime = 2019-05-28T00:00:00ZP20D:P1D
         location = 50,10
-        level = 1m to 10000m
-        unit = ms, kmh, kn, bft
+        Available altitude levels: 10m to 10000m
+        Available pressure levels: 1000hPa, 950hPa, 925hPa, 850hPa, 800hPa, 700hPa, 500hPa, 300hPa, 200hPa, 50hPa
+        Available speed units: ms, kmh, kn, bft
         */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'wind_speed_' + level + ':' + unit + '/' + location + '/' + format;
