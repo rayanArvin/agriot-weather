@@ -23,7 +23,7 @@ class DerivedWeatherParameters {
             */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime
-                + 'P20D:P1D/' + 'weather_symbol_1h:idx/' + location + '/' + format;
+                + 'P4D:P1D/' + 'weather_symbol_1h:idx/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
@@ -67,7 +67,7 @@ class DerivedWeatherParameters {
             */
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime
-                + 'P20D:P1D/' + 'weather_text_en:str/' + location + '/' + format;
+                + 'P4D:P1D/' + 'weather_text_en:str/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
