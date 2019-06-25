@@ -25,8 +25,8 @@ export class AgriculturalParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().GDD(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -38,13 +38,13 @@ export class AgriculturalParameters {
         });
     }
 
-    getET(ID: string , datetime:string, location:string, interval:string, format:string = 'csv'){
+    getET(ID:string , datetime:string, location:string, interval:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'evapotranspiration_' + interval + ':mm/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().ET(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -57,13 +57,13 @@ export class AgriculturalParameters {
         });
     }
 
-    getGLTS(ID_polygon: string , datetime:string, location:string, format:string = 'csv'){
+    getGLTS(ID_polygon:string , datetime:string, location:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'grass_land_temperature_sum:C/' + location + '/' + format;
             request.get(this.options, (error,response,body) => {
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().GLTS(body, location , ID_polygon);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID_polygon);
                         resolve(meteomatics);
                     }
                     else
@@ -76,13 +76,13 @@ export class AgriculturalParameters {
         });
     }
 
-    getLW(ID_polygon: string , datetime:string, location:string, format:string = 'csv'){
+    getLW(ID_polygon:string , datetime:string, location:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'leaf_wetness:idx/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().LW(body, location , ID_polygon);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID_polygon);
                         resolve(meteomatics);
                     }
                     else
@@ -95,13 +95,13 @@ export class AgriculturalParameters {
         });
     }
 
-    getPHN(datetime:string, location:string, format:string = 'csv'){
+    getPHN(ID_polygon:string, datetime:string, location:string, format:string = 'csv'){
         return new Promise((resolve, reject) => {
             this.options.url = main.meteo_url + datetime + '/' + 'phytophthora_negative:idx/' + location + '/' + format;
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().PHN(body, location);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location, ID_polygon);
                         resolve(meteomatics);
                     }
                     else

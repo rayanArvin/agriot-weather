@@ -27,8 +27,8 @@ class AgriculturalParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const gdd = new meteomatics_1.Meteomatics().GDD(body, location, ID);
-                        resolve(gdd);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -46,7 +46,7 @@ class AgriculturalParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().ET(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -65,7 +65,7 @@ class AgriculturalParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().GLTS(body, location, ID_polygon);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID_polygon);
                         resolve(meteomatics);
                     }
                     else
@@ -84,7 +84,7 @@ class AgriculturalParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().LW(body, location, ID_polygon);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID_polygon);
                         resolve(meteomatics);
                     }
                     else
@@ -97,13 +97,13 @@ class AgriculturalParameters {
             });
         });
     }
-    getPHN(datetime, location, format = 'csv') {
+    getPHN(ID_polygon, datetime, location, format = 'csv') {
         return new Promise((resolve, reject) => {
             this.options.url = main_1.main.meteo_url + datetime + '/' + 'phytophthora_negative:idx/' + location + '/' + format;
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().PHN(body, location);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID_polygon);
                         resolve(meteomatics);
                     }
                     else

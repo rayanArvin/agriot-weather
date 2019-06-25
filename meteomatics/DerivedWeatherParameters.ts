@@ -25,8 +25,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().WeatherSymbol(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -44,7 +44,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().WeatherCode(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -69,8 +69,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().WeatherText(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -94,8 +94,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().Visibility(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -119,8 +119,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().DewOrRime(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -138,7 +138,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().Rainfall(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -157,7 +157,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().Sleet(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -176,7 +176,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().Snowfall(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -195,7 +195,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().Fog(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -220,8 +220,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().Frost(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -245,8 +245,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().Windchill(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -270,8 +270,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().ApparentTemperature(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -289,7 +289,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().WetBulbTemperature(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -308,7 +308,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().IcingPotential(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -337,7 +337,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().SlipperyRoad(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -362,8 +362,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().PlanetaryBoundaryLayerHeight(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -387,8 +387,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().SnowLine(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -412,8 +412,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().FreezingLevel(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -433,7 +433,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().SPV(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -452,7 +452,7 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const meteomatics = new Meteomatics().PowerLineOscillatiOnWarning(body,location,ID);
+                        const meteomatics = new Meteomatics().MeteoMatics(body,location,ID);
                         resolve(meteomatics);
                     }
                     else
@@ -477,8 +477,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().BiseIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -502,8 +502,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().FoehnIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -527,8 +527,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().MoehlinJetIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -552,8 +552,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().SantaAnaWindIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -577,8 +577,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().NorthAtlanticOscillationIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -602,8 +602,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().SouthernOscillationIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -627,8 +627,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().ForestFireIndexByKaese(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -652,8 +652,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().FosbergFireWeatherIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -677,8 +677,8 @@ export class DerivedWeatherParameters {
             request.get(this.options, (error,response,body)=>{
                 try {
                     if (response.statusCode === 200){
-                        const gdd = new Meteomatics().DroughtIndex(body, location , ID);
-                        resolve(gdd);
+                        const meteomatics = new Meteomatics().MeteoMatics(body, location , ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);

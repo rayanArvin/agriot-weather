@@ -28,7 +28,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().ImmediateTemperature(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -56,7 +56,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().IntervalValuesOfTheTemperature(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -82,7 +82,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().RelativeHumidity(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -107,8 +107,8 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const gdd = new meteomatics_1.Meteomatics().AbsoluteHumidity(body, location, ID);
-                        resolve(gdd);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -133,7 +133,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().InstantaneousDewPoint(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -158,7 +158,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().PressureAdjustedToSeaLevel(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -183,7 +183,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().SurfacePressure(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -209,7 +209,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().SurfacePressureMean(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -234,7 +234,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().PressureAtHigherAltitudes(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -260,7 +260,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().MeanPressureAtHigherAltitudes(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -286,7 +286,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AtmosphericDensity(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -313,7 +313,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().InstantaneousWindSpeed(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -339,7 +339,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().InstantaneousWindDirection(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -366,7 +366,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().WindSpeedU(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -393,7 +393,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().WindSpeedV(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -419,7 +419,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().IntervalWindSpeed(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -445,7 +445,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().IntervalWindGusts(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -470,7 +470,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().IntervalWindDirection(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -495,7 +495,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AmountOfCloudCover(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -520,7 +520,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AccumulatedPrecipitation(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -545,8 +545,8 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const gdd = new meteomatics_1.Meteomatics().PrecipitationType(body, location, ID);
-                        resolve(gdd);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -570,8 +570,8 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const gdd = new meteomatics_1.Meteomatics().PrecipitationLayer5Min(body, location, ID);
-                        resolve(gdd);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
+                        resolve(meteomatics);
                     }
                     else
                         reject(response.statusCode);
@@ -595,7 +595,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().PrecipitationProbability(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -619,7 +619,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().Hail(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -644,7 +644,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().HailInterval(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -670,7 +670,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AccumulatedEvaporation(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -694,7 +694,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().CAPE(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -718,7 +718,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().LiftedIndex(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -743,7 +743,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().ThunderstormProbabilities(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -767,7 +767,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().FrostDepth(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -793,7 +793,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AmountOfSnowMelt(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -818,7 +818,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AmountOfFreshSnow(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -842,7 +842,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().SnowDepth(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -867,7 +867,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().GeopotentialHeight(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -891,7 +891,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().ClearSkyRadiationInstantaneousFlux(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -916,7 +916,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().ClearSkyRadiationAccumulatedEnergy(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -940,7 +940,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().DiffuseRadiationInstantaneousFlux(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -964,7 +964,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().DirectRadiationInstantaneousFlux(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -988,7 +988,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().GlobalRadiationInstantaneousFlux(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
@@ -1015,7 +1015,7 @@ class BasicWeatherParameters {
             request.get(this.options, (error, response, body) => {
                 try {
                     if (response.statusCode === 200) {
-                        const meteomatics = new meteomatics_1.Meteomatics().AccumulatedEnergy(body, location, ID);
+                        const meteomatics = new meteomatics_1.Meteomatics().MeteoMatics(body, location, ID);
                         resolve(meteomatics);
                     }
                     else
