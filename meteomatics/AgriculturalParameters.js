@@ -31,7 +31,7 @@ class AgriculturalParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -50,7 +50,7 @@ class AgriculturalParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -69,7 +69,7 @@ class AgriculturalParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -88,7 +88,7 @@ class AgriculturalParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -107,7 +107,7 @@ class AgriculturalParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);

@@ -21,7 +21,7 @@ class AccumulatedParameters {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -43,7 +43,7 @@ class AccumulatedParameters {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);

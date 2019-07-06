@@ -31,7 +31,7 @@ export class SetUpPolygons {
                     if (response.statusCode === 201)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 } catch(e) {
                     reject(e);
                 }
@@ -50,7 +50,7 @@ export class SetUpPolygons {
                     if (response.statusCode === 204)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 } catch(e) {
                     reject(e);
                 }
@@ -75,7 +75,7 @@ export class SetUpPolygons {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 } catch(e) {
                     reject(e);
                 }
@@ -97,7 +97,7 @@ export class SetUpPolygons {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 } catch(e) {
                     reject(e);
                 }
@@ -121,7 +121,7 @@ export class SetUpPolygons {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 } catch(e) {
                     reject(e);
                 }

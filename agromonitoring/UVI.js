@@ -22,7 +22,7 @@ class UVI {
                         resolve(uvi);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -47,7 +47,7 @@ class UVI {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -69,7 +69,7 @@ class UVI {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);

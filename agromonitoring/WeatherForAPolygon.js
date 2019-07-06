@@ -30,7 +30,7 @@ class WeatherForAPolygon {
                         resolve(weatherData);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
@@ -54,7 +54,7 @@ class WeatherForAPolygon {
                         resolve(weatherDataS);
                     }
                     else
-                        reject(response);
+                        reject(response.statusCode);
                 }
                 catch (e) {
                     reject(e);
