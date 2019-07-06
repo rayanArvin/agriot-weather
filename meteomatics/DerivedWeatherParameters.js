@@ -31,7 +31,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -50,7 +50,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -75,7 +75,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -100,7 +100,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -125,7 +125,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -144,7 +144,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -163,7 +163,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -182,7 +182,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -201,7 +201,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -226,7 +226,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -251,7 +251,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -276,7 +276,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -295,7 +295,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -314,7 +314,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -344,7 +344,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -369,7 +369,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -394,7 +394,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -419,7 +419,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -439,7 +439,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -458,7 +458,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -483,7 +483,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -508,7 +508,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -533,7 +533,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -558,7 +558,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -583,7 +583,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -608,7 +608,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -633,7 +633,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -658,7 +658,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
@@ -683,7 +683,7 @@ class DerivedWeatherParameters {
                         resolve(meteomatics);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);

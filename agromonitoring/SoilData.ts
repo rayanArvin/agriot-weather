@@ -21,7 +21,7 @@ export class SoilData {
                     }
 
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 } catch(e) {
                     reject(e);
                 }
@@ -42,7 +42,7 @@ export class SoilData {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 } catch(e) {
                     reject(e);
                 }

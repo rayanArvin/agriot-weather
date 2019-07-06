@@ -26,7 +26,7 @@ export class WeatherForAPolygon {
                         const weatherData = new WeatherPersonal().CurrentWeather(body , polyid);
                         resolve(weatherData);
                     } else
-                        reject(response.statusCode);
+                        reject(response);
                 } catch(e) {
                     reject(e);
                 }
@@ -49,7 +49,7 @@ export class WeatherForAPolygon {
                         resolve(weatherDataS);
                     }
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 } catch(e) {
                     reject(e);
                 }

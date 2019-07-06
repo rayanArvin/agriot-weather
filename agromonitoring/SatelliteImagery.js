@@ -22,7 +22,7 @@ class SatelliteImagery {
                     if (response.statusCode === 200)
                         resolve(body);
                     else
-                        reject(response.statusCode);
+                        reject(response);
                 }
                 catch (e) {
                     reject(e);
