@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "mstranslator": "^3.0.0",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "private": false
 }
